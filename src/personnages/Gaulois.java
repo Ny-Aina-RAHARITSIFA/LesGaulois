@@ -17,6 +17,9 @@ public class Gaulois {
 		System.out.println("Le gaulois "+nom+" : « "+phrase+" ».");
 	}
 	
+	public void frapper(Romain romain) {
+		System.out.println(nom+" envoie un grand coup dans la mâchoire de "+romain)
+	}
 	//main C
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Asterix",8);
