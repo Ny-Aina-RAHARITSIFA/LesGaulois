@@ -8,6 +8,6 @@ public class Gaulois extends Personnage{
 	
 	@Override
 	protected String donnerAuteur() {
-		return("Le gaulois"+getNom());
+		return("Le gaulois "+getNom());
 	}
 }

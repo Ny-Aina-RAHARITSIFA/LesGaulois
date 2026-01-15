@@ -18,9 +18,9 @@ public abstract class Personnage {
 	}
 	protected abstract String donnerAuteur();
 	
-	public void frapper(Romain romain) {
-		System.out.println(donnerAuteur()+" envoie un grand coup dans la mâchoire de "+romain.getNom());
-		romain.recevoirCoup(force/3);
+	public void frapper(Personnage personnage) {
+		System.out.println(donnerAuteur()+" donne un gros coup à "+personnage.getNom());
+		personnage.recevoirCoup(force/3);
 	}
 	
 	public void recevoirCoup(int force_coup) {
