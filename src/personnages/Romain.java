@@ -14,7 +14,7 @@ public class Romain {
 	}
 	
 	public void parler (String phrase) {
-		System.out.println("Le romain "+nom+" : « "+phrase+" ».");
+		System.out.println("Le romain "+getNom()+" : « "+phrase+" ».");
 	}
 	
 	public void recevoirCoup(int force_coup) {
@@ -23,9 +23,9 @@ public class Romain {
 			force=0;
 		}
 		if (force>0) {
-			System.out.println("Aïe !");
+			parler("Aïe !");
 		}else {
-			System.out.println("J'abondonne");
+			parler("J'abondonne");
 		}
 	}
 }
