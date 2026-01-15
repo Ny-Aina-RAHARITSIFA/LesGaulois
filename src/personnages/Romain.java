@@ -1,32 +1,13 @@
 package personnages;
 
-public class Romain {
-	private String nom;
-	private int force;
-	
+public class Romain extends Personnage {
 	public Romain(String nom, int force) {
-		this.nom = nom;
-		this.force = force;
+		super(nom,force);
 	}
 	
-	public String getNom() {
-		return nom;
-	}
-	
-	public void parler (String phrase) {
-		System.out.println("Le romain "+getNom()+" : « "+phrase+" ».");
-	}
-	
-	public void recevoirCoup(int force_coup) {
-		force = force - force_coup;
-		if (force<0) {
-			force=0;
-		}
-		if (force>0) {
-			parler("Aïe !");
-		}else {
-			parler("J'abondonne");
-		}
+	@Override
+	protected String donnerAuteur() {
+		return("Le romain"+getNom());
 	}
 }
 
