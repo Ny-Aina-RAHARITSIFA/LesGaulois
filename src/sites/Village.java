@@ -4,7 +4,7 @@ import personnages.Gaulois;
 
 public class Village {
 	private Gaulois chef;
-	private Gaulois[] gaulois=new Gaulois[4];
+	private Gaulois[] gaulois=new Gaulois[50];
 	private int nbGaulois=0;
 	
 	public Village(Gaulois chef) {
@@ -25,5 +25,18 @@ public class Village {
 			nbGaulois++;
 			chef.parler(" Bienvenue "+gauloi.getNom()+" !");
 		}
+	}
+	
+	public void afficherVillage() {
+		System.out.println("Le Village de "+chef.getNom()+" est habité par :");
+		for(int i =0;i<nbGaulois;i++) {
+			System.out.println("- "+gaulois[i].getNom());
+		}
+	}
+	
+	public void changerChef(Gaulois nouveauChef) {
+		chef.parler("Je laisse mon grand bouclier au grand "+nouveauChef.getNom());
+		chef = nouveauChef;
+		chef.parler(" Merci !");
 	}
 }

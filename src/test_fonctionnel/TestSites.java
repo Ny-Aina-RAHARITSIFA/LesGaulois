@@ -33,5 +33,15 @@ public class TestSites {
 		village.ajouterVillageois(asterix);
 		village.ajouterVillageois(obelix);
 		village.ajouterVillageois(prolix);
+		
+		village.afficherVillage();
+		camp.afficherCamp();
+		
+		Gaulois abraracourcix = new Gaulois("Abraracourcix",5);
+		Soldat briseradius = new Soldat("Briseradius",4,Grade.SOLDAT);
+		Soldat chorus = new Soldat("Chorus",4,Grade.CENTURION);
+		village.changerChef(abraracourcix);
+		camp.changerCommandant(briseradius);
+		camp.changerCommandant(chorus);
 	}
 }
