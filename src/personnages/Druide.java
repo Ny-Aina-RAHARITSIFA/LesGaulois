@@ -23,4 +23,13 @@ public class Druide extends Gaulois {
 		parler("J'ai concocté "+nbDoses+" doses de potion magique. Elle a une force de "+ puissancePotion);
 	}
 	
+	public void donnerPotion(Gaulois gaulois,Druide druide) {
+		if (gaulois.getNom()=="Obélix") {
+			druide.parler("Non, Obélix Non !... Et tu le sais très bien !");
+		}
+		else {
+			druide.parler("Tiens "+gaulois.getNom()+" un peu de potion magique.");
+		}
+			
+	}
 }

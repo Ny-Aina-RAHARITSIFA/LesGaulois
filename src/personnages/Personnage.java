@@ -2,7 +2,7 @@ package personnages;
 
 public abstract class Personnage {
 	private String nom;
-	private int force;
+	protected int force;
 	
 	public Personnage(String nom, int force) {
 		this.nom=nom;
@@ -19,7 +19,7 @@ public abstract class Personnage {
 	protected abstract String donnerAuteur();
 	
 	public void frapper(Personnage personnage) {
-		System.out.println(donnerAuteur()+" donne un gros coup à "+personnage.getNom());
+		System.out.println(donnerAuteur()+" donne un gros coup de force "+force+personnage.getNom());
 		personnage.recevoirCoup(force/3);
 	}
 	
