@@ -13,23 +13,29 @@ public abstract class Personnage {
 		return nom;
 	}
 	
+	public int getForce() {
+		return force;
+	}
+	
 	public void parler (String phrase) {
-		System.out.println(donnerAuteur()+" : « "+phrase+" ».");
+		System.out.println("Le "+donnerAuteur()+" : « "+phrase+" ».");
 	}
 	protected abstract String donnerAuteur();
 	
-	public void frapper(Personnage personnage) {
-		System.out.println(donnerAuteur()+" donne un gros coup de force "+force+personnage.getNom());
-		personnage.recevoirCoup(force/3);
+	public void frapper(Personnage adversaire) {
+		if(force!=0) {
+			System.out.println("Le "+donnerAuteur()+" donne un grand coup de force "+force+" au "+adversaire.donnerAuteur());
+			adversaire.recevoirCoup(force);
+		}
 	}
 	
 	public void recevoirCoup(int force_coup) {
-		force = force - force_coup;
+		force=force-force_coup;
 		if (force<=0) {
 			force=0;
 			parler("J'abondonne");
-		}else{
-			parler("Aïe !");
+		}else {
+			parler("AÏE !");
 		}
 		
 	}
